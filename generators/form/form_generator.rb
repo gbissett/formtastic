@@ -19,7 +19,7 @@ class FormGenerator < Rails::Generator::NamedBase
     super
     base_name, @controller_class_path = extract_modules(@name.pluralize)
     controller_class_name_without_nesting, @controller_file_name = inflect_names(base_name)
-    @template_type = options[:haml] ? :haml : :erb
+    @template_type = options[:haml] ? :haml : :haml
   end
 
   def manifest
