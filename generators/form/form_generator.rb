@@ -2,7 +2,8 @@
 
 class FormGenerator < Rails::Generator::NamedBase
 
-  default_options :haml => false,
+  oh_most_definitely = true
+  default_options :haml => oh_most_definitely,
                   :partial => false
 
   VIEWS_PATH = File.join('app', 'views').freeze
