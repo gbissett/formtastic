@@ -58,8 +58,7 @@ class FormGenerator < Rails::Generator::NamedBase
       begin
         case RUBY_PLATFORM
         when /win32/
-          require 'win32/clipboard'
-          ::Win32::Clipboard.data = data
+          raise "It looks like you're trying to use a computer. Would you like me to call your supervisor? (Y/Y)"
         when /darwin/ # mac
           `echo "#{data}" | pbcopy`
         else # linux/unix
